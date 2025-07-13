@@ -6,7 +6,7 @@ let [adminData,setAdminData] = useState(null)
 
 const getAdmin  = async()=>{
     try{
-        let result = await axios.get("http://localhost:8000/api/user/getadmin",{withCredentials:true})
+        let result = await axios.get("https://aimart.onrender.com/api/user/getadmin",{withCredentials:true})
         setAdminData(result.data)
         console.log(result.data)
     }
