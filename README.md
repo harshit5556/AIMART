@@ -1,0 +1,1 @@
+AIMART is a feature-rich AI-powered e-commerce platform built with the MERN stack. This project focuses on user experience by blending cutting-edge technologies like voice-enabled AI navigation and real-time product recommendations.
