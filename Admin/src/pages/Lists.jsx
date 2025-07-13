@@ -10,7 +10,7 @@ const Lists = () => {
 
   const fetchList = async () => {
     try {
-      const result = await axios.get("http://localhost:8000/api/product/list")
+      const result = await axios.get("https://aimart.onrender.com/api/product/list")
       setList(result.data)
       console.log(result.data)
     } catch (error) {
@@ -21,7 +21,7 @@ const Lists = () => {
 
 const removeList = async(id)=>{
   try{
-const result = await axios.post(`http://localhost:8000/api/product/remove/${id}`,{},{withCredentials:true})
+const result = await axios.post(`https://aimart.onrender.com/api/product/remove/${id}`,{},{withCredentials:true})
 if(result.data){
   toast.success("Product removed successfully!");
   fetchList()
