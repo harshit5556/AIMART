@@ -25,7 +25,7 @@ const Login = () => {
     e.preventDefault()
     setLoading(true)
     try{
-      const result = await axios.post("http://localhost:8000/api/auth/login",{
+      const result = await axios.post("https://aimart.onrender.com/api/auth/login",{
         email,password},{withCredentials:true})
         console.log(result.data)
          toast.success("Login Successfully")
@@ -50,7 +50,7 @@ const Login = () => {
   let user = response.user
   let name = user.displayName; 
   let email= user.email
-  const result =await axios.post("http://localhost:8000/api/auth/googlelogin",{
+  const result =await axios.post("https://aimart.onrender.com/api/auth/googlelogin",{
     name, email} ,{withCredentials:true})
     getCurrentuser()
         navigate("/")
