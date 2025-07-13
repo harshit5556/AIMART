@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import AIMART from '../assets/vcart logo.png'
-import { userDatacontext} from '../context/userContext';
+import { userDatacontext} from '../context/UserContext';
 import { FaSearch } from "react-icons/fa";
 import { FaCircleUser } from "react-icons/fa6";
 import { TiShoppingCart  } from "react-icons/ti";
