@@ -9,7 +9,7 @@ function UserContext({ children }) {
 
   const getCurrentuser = async () => {
     try {
-      const result = await axios.post("http://localhost:8000/api/user/getcurrentuser", {}, { withCredentials: true })
+      const result = await axios.post("https://aimart.onrender.com/api/user/getcurrentuser", {}, { withCredentials: true })
       setUserData(result.data)
       console.log(result.data)
     } catch (error) {
