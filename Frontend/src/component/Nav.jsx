@@ -23,7 +23,7 @@ const Nav = () => {
  const handlelogout = async ()=>{
     try{
         // call api through a axios 
-       const result = await axios.get("http://localhost:8000/api/auth/logout",{withCredentials: true})
+       const result = await axios.get("https://aimart.onrender.com/api/auth/logout",{withCredentials: true})
          console.log(result.data);
          getCurrentuser()
          toast.success("Logged out successfully 👋", { autoClose: 2000 });
