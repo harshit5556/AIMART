@@ -9,7 +9,7 @@ import axios from 'axios'
 import { signInWithPopup } from 'firebase/auth';
 import { provider } from '../../utils/Firebase';
 import {auth} from '../../utils/Firebase';
-import { userDatacontext } from '../context/userContext.jsx';
+import { userDatacontext } from '../context/UserContext.jsx';
 import Loading from '../component/Loading.jsx';
 import { ToastContainer , toast } from 'react-toastify';
 const Login = () => {
