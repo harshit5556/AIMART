@@ -10,7 +10,7 @@ const Order = () => {
   const loadOrderData = async () => {
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/order/userorder",
+        "https://aimart.onrender.com/api/order/userorder",
         {},
         { withCredentials: true }
       );
