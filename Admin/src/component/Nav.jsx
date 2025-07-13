@@ -8,7 +8,7 @@ const Nav = () => {
    let {getAdmin} = useContext(adminDataContext)
     const logout =async()=>{
         try{
-         const result = await axios.get("http://localhost:8000/api/auth/logout",{withCredentials:true})
+         const result = await axios.get("https://aimart.onrender.com/api/auth/logout",{withCredentials:true})
          console.log(result.data)
           getAdmin()
          navigate("/login")
