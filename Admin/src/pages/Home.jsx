@@ -9,10 +9,10 @@ const Home = () => {
 
   const fetchcount = async () => {
     try {
-      const product = await axios.get("http://localhost:8000/api/product/list", { withCredentials: true })
+      const product = await axios.get("https://aimart.onrender.com/api/product/list", { withCredentials: true })
       setTotalProduct(product.data.length)
 
-      const orders = await axios.post("http://localhost:8000/api/order/list", {}, { withCredentials: true })
+      const orders = await axios.post("https://aimart.onrender.com/api/order/list", {}, { withCredentials: true })
       setTotalOrders(orders.data.length)
     } catch (err) {
       console.error("Failed to fetch counts", err);
