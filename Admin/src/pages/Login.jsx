@@ -21,7 +21,7 @@ let navigate = useNavigate()
   setLoading(true);
     e.preventDefault()
     try{
-      const result = await axios.post("http://localhost:8000/api/auth/adminlogin",{email,password},
+      const result = await axios.post("https://aimart.onrender.com/api/auth/adminlogin",{email,password},
         {withCredentials:true})
         console.log(result.data)
         setLoading(false);
