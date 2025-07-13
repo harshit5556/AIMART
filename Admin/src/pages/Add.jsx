@@ -47,7 +47,7 @@ const Add = () => {
       };
   
       const { data } = await axios.post(
-        "http://localhost:8000/api/product/addproduct", 
+        "https://aimart.onrender.com/api/product/addproduct", 
         formData, 
         config
       );
