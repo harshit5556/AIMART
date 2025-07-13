@@ -8,7 +8,7 @@ import axios from 'axios'
 import { signInWithPopup } from 'firebase/auth';
 import { provider } from '../../utils/Firebase';
 import {auth} from '../../utils/Firebase';
-import { userDatacontext} from '../context/userContext';
+import { userDatacontext} from '../context/UserContext';
 import {  toast } from 'react-toastify';
 import Loading from '../component/Loading';
 
