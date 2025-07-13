@@ -25,7 +25,7 @@ app.use((err, req, res, next) => {
 app.use(express.json())
 app.use(cookieParser()) 
 app.use(cors({
-    origin:["http://localhost:5173","http://localhost:5174"],
+    origin:["https://aimart-frontend.onrender.com","http://localhost:5174"],
     credentials:true
 
 }))
