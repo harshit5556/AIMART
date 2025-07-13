@@ -9,7 +9,7 @@ const Order = () => {
 
   const fetchAllOrders = async () => {
     try {
-      const result = await axios.post("http://localhost:8000/api/order/list", {}, { withCredentials: true })
+      const result = await axios.post("https://aimart.onrender.com/api/order/list", {}, { withCredentials: true })
       setOrders(result.data.reverse())
     } catch (error) {
       console.log(error)
@@ -18,7 +18,7 @@ const Order = () => {
 
  const statusHandler = async (e,orderId)=>{
   try{
-  const result = await axios.post("http://localhost:8000/api/order/status",{orderId , status:e.target.value} , {withCredentials:true})
+  const result = await axios.post("https://aimart.onrender.com/api/order/status",{orderId , status:e.target.value} , {withCredentials:true})
   if(result.data){
     await fetchAllOrders();
   } 
