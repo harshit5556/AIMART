@@ -18,7 +18,7 @@ const ShopContext = ({ children }) => {
 
   const getProducts = async () => {
     try {
-      let result = await axios.get('http://localhost:8000/api/product/list');
+      let result = await axios.get('https://aimart.onrender.com/api/product/list');
       setProducts(result.data);
     } catch (error) {
       console.log(error);
@@ -50,7 +50,7 @@ const ShopContext = ({ children }) => {
       try {
         setLoading(true);
         await axios.post(
-          'http://localhost:8000/api/cart/add',
+          'https://aimart.onrender.com/api/cart/add',
           { itemId, size },
           { withCredentials: true }
         );
@@ -66,7 +66,7 @@ const ShopContext = ({ children }) => {
   const getUserCart = async () => {
     try {
       const result = await axios.post(
-        'http://localhost:8000/api/cart/get',
+        'https://aimart.onrender.com/api/cart/get',
         {},
         { withCredentials: true }
       );
@@ -86,7 +86,7 @@ const ShopContext = ({ children }) => {
     if (userData) {
       try {
         await axios.post(
-          'http://localhost:8000/api/cart/update',
+          'https://aimart.onrender.com/api/cart/update',
           { itemId, size, quantity: qty },
           { withCredentials: true }
         );
