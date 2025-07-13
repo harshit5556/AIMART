@@ -26,7 +26,7 @@ const Registration = () => {
   setLoading(true)
 e.preventDefault()
   try{
- const result = await axios.post("http://localhost:8000/api/auth/registration",{
+ const result = await axios.post("https://aimart.onrender.com/api/auth/registration",{
   name,email,password},{withCredentials:true})
   getCurrentuser()
   navigate("/")
@@ -51,7 +51,7 @@ const response = await signInWithPopup(auth , provider)
 let user = response.user
 let name = user.displayName; 
 let email= user.email
-const result =await axios.post("http://localhost:8000/api/auth/googlelogin",{
+const result =await axios.post("https://aimart.onrender.com/api/auth/googlelogin",{
   name, email} ,{withCredentials:true})
   getCurrentuser()
   navigate("/")
