@@ -7,3 +7,15 @@ AIMART is a feature-rich AI-powered e-commerce platform built with the MERN stac
 - 🧠 AI Voice Assistant – Users can navigate through the website, search, and interact using natural voice commands.
 - 📦 Admin Dashboard – Full CRUD functionalities for managing products, inventory, and categories.
 - 💳 Secure Payments – Integrated with Razorpay for smooth checkout and payment processing.
+
+## 🛠️ Installation & Setup
+
+### cd Frontend
+- npm install
+- npm start
+
+### cd Backend
+- npm install
+- npm start
+
+Create .env file for both
