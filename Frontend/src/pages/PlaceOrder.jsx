@@ -46,7 +46,7 @@ const initpay = (order) => {
     handler: async function (response) { // ✅ made async
       console.log('Payment Success:', response);
       try {
-        const { data } = await axios.post("http://localhost:8000/api/order/verifyrazorpay", response, { withCredentials: true });
+        const { data } = await axios.post("https://aimart.onrender.com/api/order/verifyrazorpay", response, { withCredentials: true });
         if (data) {
           navigate("/order");
           setCartItem({});
@@ -93,7 +93,7 @@ const initpay = (order) => {
    // make function for cod (place order for cod)
    switch(method){
     case 'cod' :
-      const result = await axios.post("http://localhost:8000/api/order/placeorder" ,orderData, {withCredentials :true})
+      const result = await axios.post("https://aimart.onrender.com/api/order/placeorder" ,orderData, {withCredentials :true})
       console.log(result.data);
       toast.success("Order placed successfully!");
       console.log("Payment Success")
@@ -107,7 +107,7 @@ const initpay = (order) => {
       }
       break;
      case 'razorpay' :
-     const resultrazorpay = await axios.post("http://localhost:8000/api/order/razorpay" , orderData , {withCredentials:true})
+     const resultrazorpay = await axios.post("https://aimart.onrender.com/api/order/razorpay" , orderData , {withCredentials:true})
      if(resultrazorpay.data){
       toast.info("Redirecting to Razorpay...");
       initpay(resultrazorpay.data)
