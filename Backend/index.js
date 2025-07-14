@@ -25,7 +25,7 @@ app.use((err, req, res, next) => {
 app.use(express.json())
 app.use(cookieParser()) 
 app.use(cors({
-    origin:["https://aimart-frontend.onrender.com","https://aimart-adminp.onrender.com"],
+    origin:["https://aimart-frontend-a2fj.onrender.com","https://aimart-adminp.onrender.com"],
     credentials:true
 
 }))
