@@ -25,9 +25,10 @@ const Nav = () => {
         // call api through a axios 
        const result = await axios.get("https://aimart.onrender.com/api/auth/logout",{withCredentials: true})
          console.log(result.data);
-         getCurrentuser()
+     await getCurrentuser()
          toast.success("Logged out successfully 👋", { autoClose: 2000 });
          navigate("/login")
+        setShowProfile(false);
     }
     catch(error){
     console.log(error);
