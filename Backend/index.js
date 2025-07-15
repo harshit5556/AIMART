@@ -29,6 +29,11 @@ app.use(cors({
     credentials:true
 
 }))
+app.options("*", cors({
+    origin: ["https://aimart-frontend-a2fj.onrender.com", "https://aimart-adminp.onrender.com"],
+    credentials: true
+}));
+
 app.use("/api/auth",authRoutes)
 app.use("/api/user",userRoute)
 app.use("/api/product",productrouth)
