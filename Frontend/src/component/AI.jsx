@@ -56,7 +56,7 @@ const AI = () => {
         speak("Opening home page");
         navigate("/");
       } else if (["cart", "kaat", "caat"].some(word => transcript.includes(word))) {
-        speak("Opening your cart");
+        speak("Opening cart page");
         navigate("/cart");
         setshowsearch(false);
       } else if (transcript.includes("contact")) {
